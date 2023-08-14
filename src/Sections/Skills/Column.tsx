@@ -1,18 +1,21 @@
 import styled from "styled-components";
 import { themes } from "../../themes";
-import codingIcon from "../../devops.png";
+import { useContext } from "react";
+import { ViewContext } from "../../Providers/ViewProvider";
 
 export const Column: React.FC<{
+  icon: string;
   title: string;
   description: string;
   tools: string[];
-}> = ({ title, description, tools }) => {
+  languages: string;
+}> = ({ title, description, tools, languages, icon }) => {
   const StyledCircle = styled.div`
     width: 100px;
     height: 100px;
     background-color: ${themes.mainContrastColor};
     border-radius: 50%;
-    background-image: url("${codingIcon}");
+    background-image: url("${icon}");
  
     background-size: 50%;
     background-repeat: no-repeat;
@@ -38,15 +41,15 @@ export const Column: React.FC<{
       >
         <StyledCircle />
         <h2>{title}</h2>
-        <div style={{ width: "36ch", marginBottom: "20px" }}>{description}</div>
+        <div style={{ maxWidth: "36ch", marginBottom: "20px" }}>
+          {description}
+        </div>
         <div
           style={{ marginBottom: "10px", color: "#0047B4", fontWeight: "600" }}
         >
           Languages
         </div>
-        <div style={{ marginBottom: "20px" }}>
-          HTML, CSS, Java, Css, React, Typescript, Python
-        </div>
+        <div style={{ marginBottom: "20px" }}>{languages}</div>
         <div
           style={{ marginBottom: "10px", color: "#0047B4", fontWeight: "600" }}
         >

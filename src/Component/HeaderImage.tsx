@@ -5,8 +5,8 @@ import justin from "../assets/images/justin.png";
 import { ViewContext } from "../Providers/ViewProvider";
 import { themes } from "../themes";
 const HeaderContainer = styled.div`
-  width: 15em;
-  height: 15em;
+  width: 100%;
+  height: 100%;
   border-radius: 50%;
   background-color: white;
 

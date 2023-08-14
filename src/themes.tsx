@@ -6,3 +6,7 @@ export const themes = {
   ligherColor: "#A5D2EA",
   lightText: "#f6f9ff",
 };
+
+export const medidaSizes = {
+  large: 626,
+};

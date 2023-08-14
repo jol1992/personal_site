@@ -12,13 +12,14 @@ export const Footer = () => {
         color: `${themes.lightText}`,
       }}
     >
-      <div style={{ padding: "10rem" }}>
+      <div style={{ padding: "10em 0" }}>
         <div
           style={{
             textAlign: "center",
             marginBottom: "2em",
             fontSize: "1.5em",
             fontWeight: "300",
+            margin: "0 1em 3em 0",
           }}
         >
           Connect with me on social media:

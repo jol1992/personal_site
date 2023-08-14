@@ -7,13 +7,12 @@ import { themes } from "../../themes";
 
 export const Work = () => {
   const GridItem = styled.div`
-    width: 200px;
-    height: 200px;
+    width: 150px;
+    height: 150px;
     // background-color: ${themes.ligherColor};
     border-radius: 20px;
     margin: auto;
     padding: 30px;
-    display: flex;
   `;
 
   const CompanyLogo = styled.div<{ company: string }>`
@@ -36,16 +35,16 @@ export const Work = () => {
       }}
     >
       <div style={{ width: "100%" }}>
-        <h2 style={{ marginBottom: "7rem" }}>Companies Ive worked for</h2>
+        <h2 style={{ marginBottom: "4em" }}>Companies Ive worked for</h2>
         <div>
           <div
             style={{
-              display: "grid",
-              gridTemplateColumns: "1fr 1fr 1fr 1fr",
+              display: "flex",
 
-              gap: "10px",
-              maxWidth: "500px",
+              gap: "1em",
+
               margin: "auto",
+              flexWrap: "wrap",
             }}
           >
             <GridItem>

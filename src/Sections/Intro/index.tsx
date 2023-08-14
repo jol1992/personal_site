@@ -1,7 +1,10 @@
 import styled from "styled-components";
 import { themes } from "../../themes";
+import { useContext } from "react";
+import { ViewContext } from "../../Providers/ViewProvider";
 
 export const Intro = () => {
+  const { isLarge } = useContext(ViewContext);
   const Wrapper = styled.div`
     background-color: ${themes.bgContrast};
     color: ${themes.lightText};
@@ -11,6 +14,7 @@ export const Intro = () => {
     padding: 12rem 0;
     text-align: center;
     line-height: 42px;
+    ${!isLarge && "margin: 0 20px;"}
   `;
 
   const Heading = styled.div`
