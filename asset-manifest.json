@@ -1,0 +1,27 @@
+{
+  "files": {
+    "main.css": "/static/css/main.e74f44bd.css",
+    "main.js": "/static/js/main.049ca911.js",
+    "static/js/787.1d602832.chunk.js": "/static/js/787.1d602832.chunk.js",
+    "static/media/justin.png": "/static/media/justin.9392922a3a16c7e3ec21.png",
+    "static/media/cat.png": "/static/media/cat.1fbc9be5a8457099aeda.png",
+    "static/media/cat2.png": "/static/media/cat2.0573995aaf808890b300.png",
+    "static/media/statefarm.png": "/static/media/statefarm.7d01531167de93daab3a.png",
+    "static/media/website_image.png": "/static/media/website_image.eb0624a267f9bc6ec7d2.png",
+    "static/media/dashboard.png": "/static/media/dashboard.ca51e33924c5d407b052.png",
+    "static/media/jamvisions.svg": "/static/media/jamvisions.ab2949ed365c648f8f15bfd7d8ef354c.svg",
+    "static/media/gmail.png": "/static/media/gmail.aa78df1faedd15f0e2a6.png",
+    "static/media/allybank.svg": "/static/media/allybank.d8e1b5159882f11e11ff8ab8796d7ecf.svg",
+    "index.html": "/index.html",
+    "static/media/linkedIn_icon.svg": "/static/media/linkedIn_icon.ecadf8ce2ab9f31dd0278e1b5c8cc7ca.svg",
+    "static/media/microsoft.svg": "/static/media/microsoft.e116a418f9c5f551889532b8c5095213.svg",
+    "static/media/fb_icon.svg": "/static/media/fb_icon.09c7f8da7bc26ef23ce2387fd31c18a5.svg",
+    "main.e74f44bd.css.map": "/static/css/main.e74f44bd.css.map",
+    "main.049ca911.js.map": "/static/js/main.049ca911.js.map",
+    "787.1d602832.chunk.js.map": "/static/js/787.1d602832.chunk.js.map"
+  },
+  "entrypoints": [
+    "static/css/main.e74f44bd.css",
+    "static/js/main.049ca911.js"
+  ]
+}
