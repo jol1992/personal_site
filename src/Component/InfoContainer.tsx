@@ -1,5 +1,4 @@
 import styled from "styled-components";
-import cat from "../assets/images/cat.png";
 import microsoft from "../assets/images/microsoft.svg";
 import ally from "../assets/images/allybank.svg";
 import statefarm from "../assets/images/statefarm.png";
@@ -9,8 +8,6 @@ import fb from "../assets/images/fb_icon.svg";
 import linkedIn from "../assets/images/linkedIn_icon.svg";
 import { Icon } from "./Icon";
 import { HeaderImage } from "./HeaderImage";
-import { useContext } from "react";
-import { ViewContext } from "../Providers/ViewProvider";
 import { themes } from "../themes";
 
 const Container = styled.div`
@@ -65,7 +62,6 @@ const ExperinceContainer = styled.div`
   border-radius: 4px;
 `;
 export const InfoContainer = () => {
-  const { setPage, page } = useContext(ViewContext);
   return (
     <Container>
       <HeaderImage />

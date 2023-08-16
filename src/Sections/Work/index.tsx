@@ -3,13 +3,11 @@ import ally from "../../assets/images/allybank.svg";
 import microsoft from "../../assets/images/microsoft.svg";
 import stateFarm from "../../assets/images/statefarm.png";
 import jamVisions from "../../assets/images/jamvisions.svg";
-import { themes } from "../../themes";
 
 export const Work = () => {
   const GridItem = styled.div`
     width: 150px;
     height: 150px;
-    // background-color: ${themes.ligherColor};
     border-radius: 20px;
     margin: auto;
     padding: 30px;

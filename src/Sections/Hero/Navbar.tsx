@@ -1,15 +1,7 @@
 import styled from "styled-components";
-import cat from "../../cat2.png";
 import { themes } from "../../themes";
 
 export const Navbar = () => {
-  const Logo = styled.div`
-    width: 100px;
-    height: 100px;
-    background-image: url("${cat}");
-    background-size: contain;
-    background-repeat: no-repeat;
-  `;
   const Wrapper = styled.div`
     display: flex;
     align-items: center;
@@ -33,10 +25,6 @@ export const Navbar = () => {
 
   return (
     <Wrapper>
-      {/* <div>
-        <Logo />
-      </div> */}
-
       <ButtonConatiner>
         <ButtonConatiner>
           <HiButton>Say Hello</HiButton>

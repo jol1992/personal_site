@@ -1,7 +1,5 @@
 import styled from "styled-components";
 import { themes } from "../../themes";
-import { useContext } from "react";
-import { ViewContext } from "../../Providers/ViewProvider";
 
 export const Column: React.FC<{
   icon: string;
