@@ -1,6 +1,6 @@
 import styled from "styled-components";
 import { themes } from "../../themes";
-import { useContext } from "react";
+import { useContext, useEffect, useRef, useState } from "react";
 import { ViewContext } from "../../Providers/ViewProvider";
 
 export const Intro = () => {
@@ -28,20 +28,41 @@ export const Intro = () => {
     max-width: 80ch;
     margin: auto;
   `;
+
+  const ref = useRef(null);
+  const [isVisable, setIsVisable] = useState(false);
+  const [beenSeen, setBeenSeen] = useState(false);
+
+  useEffect(() => {
+    const observer = new IntersectionObserver(
+      ([entries]) => {
+        if (entries.isIntersecting) {
+          setBeenSeen(true);
+        }
+      },
+      { threshold: 1 }
+    );
+    if (ref.current) {
+      observer.observe(ref.current);
+    }
+  }, []);
+
   return (
     <Wrapper>
-      <ContentWrapper>
-        <div>
-          <Heading>What's up, I'm Justin</Heading>
-          <Body>
-            Since beginning my journey as a freelance designer over 11 years
-            ago, I've done remote work for agencies, consulted for startups, and
-            collaborated with talented people to create digital products for
-            both business and consumer use. I'm quietly confident, naturally
-            curious, and perpetually working on improving my chops one design
-            problem at a time.
-          </Body>
-        </div>
+      <ContentWrapper ref={ref}>
+        {beenSeen && (
+          <div>
+            <Heading>What's up, I'm Justin</Heading>
+            <Body>
+              Since beginning my journey as a freelance designer over 11 years
+              ago, I've done remote work for agencies, consulted for startups,
+              and collaborated with talented people to create digital products
+              for both business and consumer use. I'm quietly confident,
+              naturally curious, and perpetually working on improving my chops
+              one design problem at a time.
+            </Body>
+          </div>
+        )}
       </ContentWrapper>
     </Wrapper>
   );
