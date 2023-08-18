@@ -1,5 +1,5 @@
-import { useContext } from "react";
-import styled from "styled-components";
+import { FC, useContext } from "react";
+import styled, { keyframes } from "styled-components";
 import cat from "../assets/images/cat.png";
 import justin from "../assets/images/justin.png";
 import { ViewContext } from "../Providers/ViewProvider";
@@ -18,12 +18,30 @@ const HeaderContainer = styled.div`
   transition: transform 0.6s;
   transform-style: preserve-3d;
 `;
-const Image = styled.img`
+
+const fadeIN = keyframes`
+0%{
+opacity:0;
+top:100%;
+}
+20%{
+  opacity:0;
+  }
+100%{
+  opacity:1;
+  top:0%;
+}
+`;
+
+const Image = styled.img<{ isVisable: boolean }>`
   max-width: 100%;
   max-height: 100%;
   margin-top: auto;
   bottom: 0;
   display: inline-block;
+  animation-name: ${fadeIN};
+  animation-duration: 2s;
+  position: relative;
 `;
 
 const Inner = styled.div`
@@ -45,12 +63,14 @@ const Front = styled.div`
   display: flex;
 `;
 
-export const HeaderImage = () => {
+export const HeaderImage: React.FC<{ isShowing: boolean }> = ({
+  isShowing,
+}) => {
   return (
     <HeaderContainer>
       <Inner>
         <Front>
-          <Image src={justin} />
+          {isShowing && <Image src={justin} isVisable={isShowing} />}
         </Front>
       </Inner>
     </HeaderContainer>

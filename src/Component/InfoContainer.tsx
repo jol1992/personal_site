@@ -64,7 +64,7 @@ const ExperinceContainer = styled.div`
 export const InfoContainer = () => {
   return (
     <Container>
-      <HeaderImage />
+      <HeaderImage isShowing={true} />
       <Title>Justin Lewis</Title>
       <SubTitle>Software Developer</SubTitle>
       <Body>
